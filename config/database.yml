@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: battle_cats_development
+  username: <%= ENV["BATTLE_CATS_DATABASE_USERNAME"] %>
+  password: <%= ENV["BATTLE_CATS_DATABASE_PASSWORD"] %>
+
+
+test:
+  <<: *default
+  database: battle_cats_test
+  username: <%= ENV["BATTLE_CATS_DATABASE_USERNAME"] %>
+  password: <%= ENV["BATTLE_CATS_DATABASE_PASSWORD"] %>
+
+production:
+  <<: *default
+  database: battle_cats_production
+  username: battle_cats
+  password: <%= ENV["BATTLE_CATS_DATABASE_PASSWORD"] %>
