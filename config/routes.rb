@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "/signup", to: "auth#signup"
   post "/signup", to: "users#create"
   get "/logout", to: "auth#destroy"
+  get "/final", to: "final#index"
 
 
 
