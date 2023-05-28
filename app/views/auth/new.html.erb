@@ -1,0 +1,50 @@
+<div class="flex justify-center bg-white">
+  <div class="flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+    <div class="mx-auto w-full max-w-sm lg:w-96">
+      <div class="relative flex lg:block">
+        <%= image_tag 'logo1.png' %>
+      </div>
+      <div>
+        <h2 class="mt-4 text-3xl font-bold tracking-tight text-gray-900">Log in</h2>
+      </div>
+
+
+      <div class="mt-6">
+        <form action="#" method="POST" class="space-y-6">
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+            <div class="mt-1">
+              <input id="email" name="email" type="email" placeholder="E-mail address" autocomplete="email" required class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+            </div>
+          </div>
+
+
+          <div class="space-y-1">
+            <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+            <div class="mt-1">
+              <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" required class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-purble-500 focus:outline-none focus:ring-purple-500 sm:text-sm">
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between">
+          </div>
+
+          <div class="flex flex-col" >
+            <div class="relative">
+              <form accept-charset="UTF-8" action="/login" method="post">
+                <button type="submit" class="flex w-full justify-center rounded-md border border-transparent bg-purple-300 py-2 px-4 text-sm font-medium text-black shadow-sm hover:bg-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+                  Log in
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <pre>New user? <%= link_to "Sign up now!", signup_path, class: "link"%></pre>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="flex justify-center bg-white">
+  <div class="flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+    <div class="mx-auto w-full max-w-sm lg:w-96">
+      <div class="w-fit h-40 relative flex lg:block">
+        <%= image_tag 'logo1.png' %>
+      </div>
+        <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900">Sign up</h2>
+      </div>
+
+        <div class="mt-4">
+          <%= form_for :user, url: '/signup' do |f|  %>
+            <div class="mt-4">
+              <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+              <input id="username" name="[user]username" type="text" placeholder="Username" class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+            </div>
+            <div class="mt-4">
+              <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+              <div class="mt-1">
+                <input id="email" name="[user]email" type="email" placeholder="E-mail address" autocomplete="email" required class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+              <div class="mt-1">
+                <input id="password" name="[user]password" type="password" placeholder="Password" autocomplete="current-password" required class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+              </div>
+            </div>
+            <div class="mt-4">
+              <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Password Confirmation</label>
+              <div class="mt-1">
+                <input id="password" name="[user]password_confirmation" type="password" placeholder="Password Confirmation" autocomplete="current-password" required class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+              </div>
+            </div>
+
+            <%= submit_tag 'Register with email', class: "mt-4 flex w-full justify-center rounded-md border border-transparent bg-purple-300 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2" %>
+          <%end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

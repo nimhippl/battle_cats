@@ -12,7 +12,7 @@ class AuthController < ApplicationController
     user = User.find_by_email(login_params[:email])
     if user.present? && user.authenticate(login_params[:password])
       session[:current_user] = user.id
-      redirect_to '/dashboard'
+      redirect_to '/signup'
     else
       flash[:error] = 'Wrong credentials'
       redirect_to login_path
