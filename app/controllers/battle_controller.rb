@@ -7,6 +7,14 @@ class BattleController < ApplicationController
 
   end
 
+  def choose1
+
+  end
+
+  def choose2
+
+  end
+
   def start_battle
     @left = create_Samewrai
     @right = create_Bulk
