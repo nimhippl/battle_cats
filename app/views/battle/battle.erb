@@ -1,0 +1,27 @@
+<div class="game_container">
+  <div class="statuses_container">
+    <div class="left_cat_status">
+      <div class="hp"><%= @left.get_formatted_hp %></div>
+      <div class="mana">Мана <%= @left.mana %></div>
+    </div>
+    <div class="right_cat_status">
+      <div class="hp"><%= @right.get_formatted_hp %></div>
+      <div class="mana">Мана <%= @right.mana %></div>
+    </div>
+  </div>
+
+  <div class="cats_container">
+      <%= image_tag @left.img_src %>
+      <%= image_tag @right.img_src %>
+  </div>
+
+  <div class="control_panel_container">
+    <p>Ход игрока: <%= @turn %></p>
+    <ul class="skills_list">
+      <% @current.skill_list.each_with_index do |skill, i| %>
+        <li>  <%= link_to skill.name, "/battle?move_id=#{i + 1}" %></li>
+      <% end %>
+    </ul>
+    <%= link_to 'Атака', '/battle?move_id=0', class: "attack_button" %>
+  </div>
+</div>
