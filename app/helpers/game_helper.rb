@@ -56,6 +56,7 @@ module GameHelper
 
     voyaka = Kitty.new("Voyaka", :team1, 30, 20, 12, sword)
     voyaka.learn_skills(warcry, sword_slash, armor_piercing)
+    voyaka.img_src =  'voyaka.jpg'
     voyaka
   end
 
@@ -94,6 +95,7 @@ module GameHelper
 
     kogtic = Kitty.new("Kogtic", :team2, 20, 50, 9, claws)
     kogtic.learn_skills(tear, retreat, assasination)
+    kogtic.img_src =  'kogtic.jpg'
     kogtic
   end
 
@@ -124,6 +126,7 @@ module GameHelper
 
     mewg = Kitty.new("Mewg", :team3, 15, 15, 41, staff)
     mewg.learn_skills(fireball, ice_shards, emp)
+    mewg.img_src =  'mewg.jpg'
     mewg
   end
 
@@ -167,6 +170,7 @@ module GameHelper
 
     mewlitvenik = Kitty.new("Mewlitvenik", :team5, 30, 20, 35, staff)
     mewlitvenik.learn_skills(prayer, holy_light, epitaphy)
+    mewlitvenik.img_src =  'mewlitvenik.jpg'
     mewlitvenik
   end
 
