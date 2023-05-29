@@ -19,7 +19,7 @@
     <p>Ход игрока: <%= @turn %></p>
     <ul class="skills_list">
       <% @current.skill_list.each_with_index do |skill, i| %>
-        <li>  <%= link_to skill.name, "/battle?move_id=#{i + 1}" %></li>
+        <li>  <%= link_to "#{skill.name}(#{skill.cost}): #{skill.desc}", "/battle?move_id=#{i + 1}" %></li>
       <% end %>
     </ul>
     <%= link_to 'Атака', '/battle?move_id=0', class: "attack_button" %>
