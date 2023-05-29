@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get "/final", to: "final#index"
 
 
+  get "/choose1", to: "battle#choose1"
+  get "/choose2", to: "battle#choose2"
 
   get "/info", to: "info#index"
 

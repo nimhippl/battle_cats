@@ -8,17 +8,43 @@ class BattleController < ApplicationController
   end
 
   def choose1
-
+    @@battles[session.id.to_s] = {first: nil , second: nil, turn: 1}
   end
 
   def choose2
-
+    cat = params[:cat]
+    case cat
+    when "Voyka"
+      @@battles[session.id.to_s][:first] = create_Voyaka
+    when "Samewrai"
+      @@battles[session.id.to_s][:first] = create_Samewrai
+    when "Kogtic"
+      @@battles[session.id.to_s][:first] = create_Kogtic
+    when "Bulk"
+      @@battles[session.id.to_s][:first] = create_Bulk
+    when "Mewlitvenik"
+      @@battles[session.id.to_s][:first] = create_Mewlitvenik
+    when "Mewg"
+      @@battles[session.id.to_s][:first] = create_Mewg
+    end
   end
 
   def start_battle
-    @left = create_Samewrai
-    @right = create_Bulk
-    @@battles[session.id.to_s] = {first: @left, second: @right, turn: 1}
+    cat = params[:cat]
+    case cat
+    when "Voyka"
+      @@battles[session.id.to_s][:second] = create_Voyaka
+    when "Samewrai"
+      @@battles[session.id.to_s][:second] = create_Samewrai
+    when "Kogtic"
+      @@battles[session.id.to_s][:second] = create_Kogtic
+    when "Bulk"
+      @@battles[session.id.to_s][:second] = create_Bulk
+    when "Mewlitvenik"
+      @@battles[session.id.to_s][:second] = create_Mewlitvenik
+    when "Mewg"
+      @@battles[session.id.to_s][:second] = create_Mewg
+    end
   end
 
   def battle

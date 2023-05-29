@@ -152,7 +152,7 @@ module GameHelper
   end
 
   def create_Mewlitvenik
-    0
+
     #Mewlitvenik
     #str: 30
     #agi: 20
