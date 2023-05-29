@@ -78,6 +78,12 @@ class BattleController < ApplicationController
       @@battles[id][:turn] = 1
     end
 
+    if first.current_hp <= 0
+      redirect_to "/final?winner=2"
+    elsif second.current_hp <= 0
+      redirect_to "/final?winner=1"
+    end
+
   end
 
 end
