@@ -14,3 +14,20 @@
     max-height: 20%;
     max-width: 50%;
 }
+
+.choose_container{
+    /*margin-left: 100px;*/
+    display: flex;
+    max-height: 75vh;
+}
+.choose_container div {
+    margin-left: 10px;
+    /*margin-top: 50px;*/
+    max-height: 100%;
+    max-width: 33%;
+
+}
+
+.choose_container a{
+    margin-left: 140px;
+}
