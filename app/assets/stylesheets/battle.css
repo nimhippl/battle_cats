@@ -23,6 +23,11 @@
     max-width: 50%;
 }
 
+.cats_container_right img
+{
+    transform: scaleX(-1);
+}
+
 .text-block{
     font-family: 'Lucida Sans',  Arial, sans-serif; 
     font-size: 16px; 

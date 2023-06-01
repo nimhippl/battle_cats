@@ -65,7 +65,7 @@ module GameHelper
 
     voyaka = Kitty.new("Voyaka", :team1, 30, 20, 12, sword)
     voyaka.learn_skills(warcry, sword_slash, armor_piercing)
-    voyaka.img_src =  'voyaka.jpg'
+    voyaka.img_src =  'voyaka.png'
     voyaka
   end
 
@@ -108,7 +108,7 @@ module GameHelper
 
     kogtic = Kitty.new("Kogtic", :team2, 20, 50, 9, claws)
     kogtic.learn_skills(tear, retreat, assasination)
-    kogtic.img_src =  'kogtic.jpg'
+    kogtic.img_src =  'kogtic.png'
     kogtic
   end
 
@@ -144,7 +144,7 @@ module GameHelper
 
     mewg = Kitty.new("Mewg", :team3, 15, 15, 41, staff)
     mewg.learn_skills(fireball, ice_shards, emp)
-    mewg.img_src =  'mewg.jpg'
+    mewg.img_src =  'mewg.png'
     mewg
   end
 
@@ -168,7 +168,7 @@ module GameHelper
 
     samewrai = Kitty.new("Samewrai", :team4, 20, 55, 8, katana)
     samewrai.learn_skills(steel_tempest, quick_dash)
-    samewrai.img_src =  'samewrai.jpg'
+    samewrai.img_src =  'samewrai.png'
     samewrai
   end
 
@@ -196,7 +196,7 @@ module GameHelper
 
     mewlitvenik = Kitty.new("Mewlitvenik", :team5, 30, 20, 35, staff)
     mewlitvenik.learn_skills(prayer, holy_light, epitaphy)
-    mewlitvenik.img_src =  'mewlitvenik.jpg'
+    mewlitvenik.img_src =  'mewlitvenik.png'
     mewlitvenik
   end
 
@@ -248,7 +248,7 @@ module GameHelper
     magic_form.desc = "вы принимаете ИСЛАМ (магическую форму). Сила умений увеличина. Ваши атаки дополнительно наносят немало магического урона. Когда вас бьют, вы наносите в ответ магический урон"
     bulk = Kitty.new("Bulk", :team6, 20, 20, 20, water_paws)
     bulk.learn_skills(attack_form, defence_form, magic_form)
-    bulk.img_src = 'bulk.jpg'
+    bulk.img_src = 'bulk.png'
 
     bulk
   end
