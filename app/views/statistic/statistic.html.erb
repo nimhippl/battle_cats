@@ -1,0 +1,43 @@
+<h1 style= "text-align: center; margin-top: 3%; margin-bottom: 2%;  font-weight: bold; font-size: 45px; color: rgb(91 33 182) ">  Мяустика </h1>
+
+<div class="container">
+ <div class="two-lists"> 
+
+ <div class="actual">
+ <ol>
+    <h1 style= "font-weight: bold; font-size:20px">Номер игры</h1>
+    <%- @stat_list.each do |e| %>
+      <li><%= " Игра №#{e.number}" %></li>
+    <%- end %>
+
+ </ol>
+
+  </div>
+
+  <div class="actual">
+   <ul>
+    <h1 style= "font-weight: bold; font-size:20px">Мяудитель</h1>
+    <%- @stat_list.each do |e| %>
+      <li><%= " Игрок #{e.winner} победил " %></li>
+    <%- end %>  
+
+   </ul>
+  </div>
+
+  <div class="actual">
+    <ul>
+      <h1 style= "font-weight: bold; font-size:20px">Сомурники</h1>
+        <%- @stat_list.each do |e| %>
+        <li><%= "#{e.left_cat} vs #{e.right_cat}" %></li>
+        <%- end %>
+    </ul>
+  </div>
+  </div>        
+
+</div>        
+<div class= "container">
+    <div class="w-fit rounded-md bg-purple-300 mt-20 m-1.5 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-purple-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500">
+    <%= button_to 'На лежанку', '/', method: :get %>
+    </div>
+</div>
+</div>

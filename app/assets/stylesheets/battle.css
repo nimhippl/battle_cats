@@ -36,13 +36,18 @@
 
   .two-lists{
     display: flex;
-    width: 800px;
+    width: 700px;
     justify-content: space-around;
   }
 
   .actual{
     padding: 10px;
+    font-size: 16px; 
+    justify-content: center;
+
   }
+
+
 .choose_container{
     /*margin-left: 100px;*/
     display: flex;
