@@ -11,19 +11,17 @@
   </div>
 
   <div class="cats_container">
-      <%= image_tag @left.img_src %>
-    <div class="cats_container_right">
-      <%= image_tag @right.img_src %>
-    </div>
+    <%= image_tag @left.img_src %>
+    <%= image_tag @right.img_src, id: 'right' %>
   </div>
 
-  <div class="control_panel_container">
-    <p>Ход игрока: <%= @turn %></p>
-    <ul class="skills_list">
-      <% @current.skill_list.each_with_index do |skill, i| %>
-        <li>  <%= link_to "#{skill.name}(#{skill.cost}): #{skill.desc}", "/battle?move_id=#{i + 1}" %></li>
-      <% end %>
-    </ul>
-    <%= link_to 'Атака', '/battle?move_id=0', class: "attack_button" %>
-  </div>
+    <div class="control_panel_container">
+      <p>Ход игрока: <%= @turn %></p>
+      <ul class="skills_list">
+        <% @current.skill_list.each_with_index do |skill, i| %>
+          <li>  <%= link_to "#{skill.name}(#{skill.cost}): #{skill.desc}", "/battle?move_id=#{i + 1}" %></li>
+        <% end %>
+      </ul>
+      <%= link_to 'Атака', '/battle?move_id=0', class: "attack_button" %>
+    </div>
 </div>

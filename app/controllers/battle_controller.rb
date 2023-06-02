@@ -14,7 +14,7 @@ class BattleController < ApplicationController
   def choose2
     cat = params[:cat]
     case cat
-    when "Voyka"
+    when "Voyaka"
       @@battles[session.id.to_s][:first] = create_Voyaka
     when "Samewrai"
       @@battles[session.id.to_s][:first] = create_Samewrai
@@ -32,7 +32,7 @@ class BattleController < ApplicationController
   def start_battle
     cat = params[:cat]
     case cat
-    when "Voyka"
+    when "Voyaka"
       @@battles[session.id.to_s][:second] = create_Voyaka
     when "Samewrai"
       @@battles[session.id.to_s][:second] = create_Samewrai
