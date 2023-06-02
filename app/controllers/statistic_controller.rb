@@ -4,6 +4,6 @@ class StatisticController < ApplicationController
   end
 
   def statistic
-
+    @stat_list = Record.where(user_id: session[:current_user])
   end
 end

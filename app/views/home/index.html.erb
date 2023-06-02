@@ -2,14 +2,24 @@
 <nav class="bg-violet-800">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-end">
-      <a href="/login" aria-current="page"
-          class="rounded-md bg-purple-300 m-1.5 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-purple-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500">
-        Log in
+      <%- if @current_user.present? %>
+        <div class="text-base font-medium text-white">
+          <%=  @current_user.username %>
+        </div>
+        <a href="/logout" aria-current="page"
+           class="rounded-md bg-purple-300 m-1.5 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-purple-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500">
+           Log out
         </a>
-    <a href="/signup" aria-current="page"
-              class="rounded-md bg-purple-300 m-1.5 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-purple-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500">
-        Sign up
-      </a>
+      <% else %>
+        <a href="/login" aria-current="page"
+           class="rounded-md bg-purple-300 m-1.5 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-purple-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500">
+          Log in
+        </a>
+        <a href="/signup" aria-current="page"
+           class="rounded-md bg-purple-300 m-1.5 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-purple-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500">
+          Sign up
+        </a>
+      <% end %>
     </div>
   </div>
 </nav>
@@ -21,9 +31,15 @@
     <div class="max-w-6xl sm:mx-auto md:max-w-6xl">
       <div>
         <div class="flex justify-center mt-32">
+          <%- if @current_user.present? %>
           <div class="w-fit rounded-md bg-purple-300 m-1.5 mt-20 px-3.5 py-2.5 text-9xl font-semibold text-black shadow-9xl hover:bg-purple-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500">
             <%= button_to '!!!!!МЯУ РРРРР!!!!!', '/choose1', method: :get %>
           </div>
+            <div class="w-fit rounded-md bg-purple-300 m-1.5 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-purple-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500">
+              <%= button_to 'Мяустика', '/statistic', method: :get %>
+            </div>
+
+            <% end %>
         </div>
         <div class="flex justify-center mt-8">
           <div class="w-fit rounded-md bg-purple-300 m-1.5 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-purple-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500">

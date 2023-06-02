@@ -77,10 +77,12 @@ class BattleController < ApplicationController
       second.take_turn1(move_id, first)
       @@battles[id][:turn] = 1
     end
-
+    number = Record.where(user_id:  session[:current_user]).size
     if first.current_hp <= 0
+      Record.create(winner: 2, left_cat: first.name, right_cat: second.name, number: number + 1, user_id: session[:current_user])
       redirect_to "/final?winner=2"
     elsif second.current_hp <= 0
+      Record.create(winner: 1, left_cat: first.name, right_cat: second.name, number: number + 1, user_id: session[:current_user])
       redirect_to "/final?winner=1"
     end
 
